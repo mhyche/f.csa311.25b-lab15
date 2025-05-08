@@ -11,6 +11,6 @@ public class Division {
         double result = a / b;
         return BigDecimal.valueOf(result)
                          .setScale(2, RoundingMode.HALF_UP)
-                         .doubleValue();
+                         .doubleValue();git tag v1.0.1
     }
 }
