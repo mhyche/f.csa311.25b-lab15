@@ -4,15 +4,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DivisionTest {
+
     @Test
-    void testDividePositive() {
-        Division div = new Division();
-        assertEquals(2.0, div.divide(6.0, 3.0));
+    void testDivideNormal() {
+        Division calc = new Division();
+        assertEquals(2.00, calc.divide(4.0, 2.0), 0.001);
+        assertEquals(1.67, calc.divide(5.0, 3.0), 0.001);
     }
 
     @Test
     void testDivideByZero() {
-        Division div = new Division();
-        assertThrows(IllegalArgumentException.class, () -> div.divide(5.0, 0.0));
+        Division calc = new Division();
+        assertThrows(IllegalArgumentException.class, () -> calc.divide(4.0, 0.0));
     }
 }
